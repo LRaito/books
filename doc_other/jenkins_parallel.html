@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Docker · GitBook</title>
+        <title>Jenkins 并发构建 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.1">
@@ -85,10 +85,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="cache.html" />
     
-    
-    <link rel="prev" href="../doc_gitbook/install_plugin.html" />
+    <link rel="prev" href="proxy.html" />
     
 
     </head>
@@ -175,9 +173,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../doc_docker/">
             
-                <a href="./">
+                <a href="../doc_docker/">
             
                     
                     Docker
@@ -189,9 +187,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="cache.html">
+        <li class="chapter " data-level="1.3.1" data-path="../doc_docker/cache.html">
             
-                <a href="cache.html">
+                <a href="../doc_docker/cache.html">
             
                     
                     加速 Golang 程序构建
@@ -202,9 +200,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="multi_arch.html">
+        <li class="chapter " data-level="1.3.2" data-path="../doc_docker/multi_arch.html">
             
-                <a href="multi_arch.html">
+                <a href="../doc_docker/multi_arch.html">
             
                     
                     支持运行不同架构容器
@@ -220,9 +218,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../doc_other/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../doc_other/">
+                <a href="./">
             
                     
                     其他
@@ -234,9 +232,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../doc_other/proxy.html">
+        <li class="chapter " data-level="1.4.1" data-path="proxy.html">
             
-                <a href="../doc_other/proxy.html">
+                <a href="proxy.html">
             
                     
                     wsl 科学上网
@@ -247,9 +245,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../doc_other/jenkins_parallel.html">
+        <li class="chapter active" data-level="1.4.2" data-path="jenkins_parallel.html">
             
-                <a href="../doc_other/jenkins_parallel.html">
+                <a href="jenkins_parallel.html">
             
                     
                     Jenkins 并发构建
@@ -295,7 +293,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Docker</a>
+        <a href=".." >Jenkins 并发构建</a>
     </h1>
 </div>
 
@@ -310,9 +308,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h1><p>Docker &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x5F15;&#x64CE;&#xFF0C;&#x57FA;&#x4E8E; Go &#x8BED;&#x8A00; &#x5E76;&#x9075;&#x4ECE; Apache2.0 &#x534F;&#x8BAE;&#x5F00;&#x6E90;&#x3002;
-Docker &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x6253;&#x5305;&#x4ED6;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x4EE5;&#x53CA;&#x4F9D;&#x8D56;&#x5305;&#x5230;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x3001;&#x53EF;&#x79FB;&#x690D;&#x7684;&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x5E03;&#x5230;&#x4EFB;&#x4F55;&#x6D41;&#x884C;&#x7684; Linux &#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x865A;&#x62DF;&#x5316;&#x3002;
-&#x5BB9;&#x5668;&#x662F;&#x5B8C;&#x5168;&#x4F7F;&#x7528;&#x6C99;&#x7BB1;&#x673A;&#x5236;&#xFF0C;&#x76F8;&#x4E92;&#x4E4B;&#x95F4;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x63A5;&#x53E3;&#xFF08;&#x7C7B;&#x4F3C; iPhone &#x7684; app&#xFF09;,&#x66F4;&#x91CD;&#x8981;&#x7684;&#x662F;&#x5BB9;&#x5668;&#x6027;&#x80FD;&#x5F00;&#x9500;&#x6781;&#x4F4E;&#x3002;</p>
+                                <h1 id="jenkins-&#x5E76;&#x53D1;&#x6784;&#x5EFA;">Jenkins &#x5E76;&#x53D1;&#x6784;&#x5EFA;</h1><p>&#x901A;&#x8FC7; parallel &#x6307;&#x4EE4;&#x5E76;&#x53D1;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x52A0;&#x901F;&#x6784;&#x5EFA;</p><pre><code>stages {
+    stage(&apos;x86_64&apos;) {
+        environment {
+            GOPROXY = &apos;https://goproxy.cn,direct&apos;
+        }
+
+        stages {
+            stage(&apos;init&apos;){
+                steps {
+                    script {
+                        sh &quot;go env&quot;
+                        sh &quot;go mod tidy&quot;
+                    }
+                }
+            }
+            stage(&apos;build&apos;) {
+                steps {
+                    script{
+                        def stepsForParallel = [:]
+                        String[] apps = [&quot;app1&quot;, &quot;app2&quot;, &quot;app3&quot;]
+                        apps.each{ app -&gt;
+                        stepsForParallel[app] = {
+                            stage(app) {
+                                sh &quot;make build -C app/${app}&quot;
+                            }
+                        }
+                        }
+                        parallel stepsForParallel
+                    }
+                }
+            }
+        }
+    }
+}</code></pre>
+
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -340,14 +370,10 @@ Docker &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x6253;&#x5305;&#x4ED6;&
 
             
                 
-                <a href="../doc_gitbook/install_plugin.html" class="navigation navigation-prev " aria-label="Previous page: 插件安装">
+                <a href="proxy.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: wsl 科学上网">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="cache.html" class="navigation navigation-next " aria-label="Next page: 加速 Golang 程序构建">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -356,7 +382,7 @@ Docker &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x6253;&#x5305;&#x4ED6;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Docker","level":"1.3","depth":1,"next":{"title":"加速 Golang 程序构建","level":"1.3.1","depth":2,"path":"doc_docker/cache.md","ref":"doc_docker/cache.md","articles":[]},"previous":{"title":"插件安装","level":"1.2.2","depth":2,"path":"doc_gitbook/install_plugin.md","ref":"doc_gitbook/install_plugin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_docker/README.md","mtime":"2025-02-07T01:42:18.573Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-02-25T02:43:58.921Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Jenkins 并发构建","level":"1.4.2","depth":2,"previous":{"title":"wsl 科学上网","level":"1.4.1","depth":2,"path":"doc_other/proxy.md","ref":"doc_other/proxy.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_other/jenkins_parallel.md","mtime":"2025-02-28T07:01:05.247Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-02-25T02:43:58.921Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
