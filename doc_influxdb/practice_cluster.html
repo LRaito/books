@@ -53,6 +53,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -799,6 +803,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.5" data-path="../doc_other/redis_sentinel.html">
+            
+                <a href="../doc_other/redis_sentinel.html">
+            
+                    
+                    Redis 哨兵模式
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -849,7 +866,51 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="influxdb-&#x96C6;&#x7FA4;&#x7248;&#x5B9E;&#x8DF5;">InfluxDB &#x96C6;&#x7FA4;&#x7248;&#x5B9E;&#x8DF5;</h1><h1 id="&#x5FEB;&#x901F;&#x5F00;&#x59CB;">&#x5FEB;&#x901F;&#x5F00;&#x59CB;</h1><ol><li>&#x4F7F;&#x7528; Docker-Compose &#x5FEB;&#x901F;&#x90E8;&#x7F72;
+                                <ul>
+<li><div><a href="#influxdb-&#x96C6;&#x7FA4;&#x7248;&#x5B9E;&#x8DF5;">InfluxDB &#x96C6;&#x7FA4;&#x7248;&#x5B9E;&#x8DF5;</a><i></i></div></li>
+<li><div><a href="#&#x5FEB;&#x901F;&#x5F00;&#x59CB;">&#x5FEB;&#x901F;&#x5F00;&#x59CB;</a><i></i></div></li>
+<li><div><a href="#&#x53EF;&#x89C6;&#x5316;&#x63A7;&#x5236;&#x53F0;">&#x53EF;&#x89C6;&#x5316;&#x63A7;&#x5236;&#x53F0;</a><i></i></div></li>
+<li><div><a href="#&#x914D;&#x7F6E;&#x4FEE;&#x6539;">&#x914D;&#x7F6E;&#x4FEE;&#x6539;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#influxdbconf">influxdb.conf</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x5EFA;&#x8BAE;&#x4FEE;&#x6539;">&#x5EFA;&#x8BAE;&#x4FEE;&#x6539;</a><i></i></div></li>
+<li><div><a href="#&#x5B8C;&#x6574;&#x914D;&#x7F6E;">&#x5B8C;&#x6574;&#x914D;&#x7F6E;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#influxdb-metaconf">influxdb-meta.conf</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x5EFA;&#x8BAE;&#x4FEE;&#x6539;">&#x5EFA;&#x8BAE;&#x4FEE;&#x6539;</a><i></i></div></li>
+<li><div><a href="#&#x5B8C;&#x6574;&#x914D;&#x7F6E;">&#x5B8C;&#x6574;&#x914D;&#x7F6E;</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#&#x91CD;&#x8981;&#x529F;&#x80FD;&#x673A;&#x5236;">&#x91CD;&#x8981;&#x529F;&#x80FD;/&#x673A;&#x5236;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x57FA;&#x672C;&#x67B6;&#x6784;">&#x57FA;&#x672C;&#x67B6;&#x6784;</a><i></i></div></li>
+<li><div><a href="#&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7ED3;&#x6784;">&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7ED3;&#x6784;</a><i></i></div></li>
+<li><div><a href="#&#x7F13;&#x5B58;&#x961F;&#x5217;&#xFF08;hinted-handoff&#xFF09;">&#x7F13;&#x5B58;&#x961F;&#x5217;&#xFF08;hinted handoff&#xFF09;</a><i></i></div></li>
+<li><div><a href="#&#x53CD;&#x71B5;&#xFF08;anti-entropy&#xFF09;&#x3010;&#x6682;&#x4E0D;&#x652F;&#x6301;&#x3011;">&#x53CD;&#x71B5;&#xFF08;anti-entropy&#xFF09;&#x3010;&#x6682;&#x4E0D;&#x652F;&#x6301;&#x3011;</a><i></i></div></li>
+<li><div><a href="#&#x5907;&#x4EFD;&#x8FD8;&#x539F;">&#x5907;&#x4EFD;&#x8FD8;&#x539F;</a><i></i></div></li>
+<li><div><a href="#&#x96C6;&#x7FA4;&#x7BA1;&#x7406;">&#x96C6;&#x7FA4;&#x7BA1;&#x7406;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x8282;&#x70B9;&#x6545;&#x969C;&#x6D4B;&#x8BD5;">&#x8282;&#x70B9;&#x6545;&#x969C;&#x6D4B;&#x8BD5;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x8282;&#x70B9;&#x6545;&#x969C;&#x671F;&#x95F4;">&#x8282;&#x70B9;&#x6545;&#x969C;&#x671F;&#x95F4;</a><i></i></div></li>
+<li><div><a href="#&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;">&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x4E0D;&#x540C;&#x573A;&#x666F;">&#x4E0D;&#x540C;&#x573A;&#x666F;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#2k-&#x8BBE;&#x5907;-&#xFF08;6k-pointss&#xFF09;">2K &#x8BBE;&#x5907; &#xFF08;6K points/s&#xFF09;</a><i></i></div></li>
+<li><div><a href="#2k-&#x8BBE;&#x5907;--100k-&#x8BBE;&#x5907;&#xFF08;6k-pointss--300k-pointss&#xFF09;">2K &#x8BBE;&#x5907; ~ 100K &#x8BBE;&#x5907;&#xFF08;6K points/s ~ 300K points/s&#xFF09;</a><i></i></div></li>
+<li><div><a href="#100k-&#x8BBE;&#x5907;&#x4EE5;&#x4E0A;">100K &#x8BBE;&#x5907;&#x4EE5;&#x4E0A;</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#&#x5176;&#x4ED6;&#x6CE8;&#x610F;&#x70B9;">&#x5176;&#x4ED6;&#x6CE8;&#x610F;&#x70B9;</a><i></i></div></li>
+<li><div><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</a><i></i></div></li>
+</ul>
+
+
+
+
+<h1 id="influxdb-&#x96C6;&#x7FA4;&#x7248;&#x5B9E;&#x8DF5;">InfluxDB &#x96C6;&#x7FA4;&#x7248;&#x5B9E;&#x8DF5;</h1><h1 id="&#x5FEB;&#x901F;&#x5F00;&#x59CB;">&#x5FEB;&#x901F;&#x5F00;&#x59CB;</h1><ol><li>&#x4F7F;&#x7528; Docker-Compose &#x5FEB;&#x901F;&#x90E8;&#x7F72;
 </li>
 <li><a href="http://gitlab.shuyilink.com/embeded-software/linkiiot/-/blob/develop/tool/influx/build/docker-compose.yml" target="_blank">http://gitlab.shuyilink.com/embeded-software/linkiiot/-/blob/develop/tool/influx/build/docker-compose.yml</a>
 &#x5305;&#x542B; Data &#x8282;&#x70B9; <em>3&#xFF0C;Meta &#x8282;&#x70B9; </em> 3
@@ -1132,7 +1193,7 @@ ts=2025-06-19T02:37:35.398806Z lvl=warn msg=&quot;Write shard failed with hinted
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"集群版实践","level":"1.5.3.1","depth":3,"next":{"title":"Golang","level":"1.6","depth":1,"path":"doc_golang/README.md","ref":"doc_golang/README.md","articles":[{"title":"pprof 调试","level":"1.6.1","depth":2,"path":"doc_golang/pprof.md","ref":"doc_golang/pprof.md","articles":[]}]},"previous":{"title":"实践","level":"1.5.3","depth":2,"path":"doc_influxdb/practice.md","ref":"doc_influxdb/practice.md","articles":[{"title":"集群版实践","level":"1.5.3.1","depth":3,"path":"doc_influxdb/practice_cluster.md","ref":"doc_influxdb/practice_cluster.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_influxdb/practice_cluster.md","mtime":"2025-07-03T07:21:50.573Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-07-09T08:58:25.279Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"集群版实践","level":"1.5.3.1","depth":3,"next":{"title":"Golang","level":"1.6","depth":1,"path":"doc_golang/README.md","ref":"doc_golang/README.md","articles":[{"title":"pprof 调试","level":"1.6.1","depth":2,"path":"doc_golang/pprof.md","ref":"doc_golang/pprof.md","articles":[]}]},"previous":{"title":"实践","level":"1.5.3","depth":2,"path":"doc_influxdb/practice.md","ref":"doc_influxdb/practice.md","articles":[{"title":"集群版实践","level":"1.5.3.1","depth":3,"path":"doc_influxdb/practice_cluster.md","ref":"doc_influxdb/practice_cluster.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","page-treeview","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"page-treeview":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_influxdb/practice_cluster.md","mtime":"2025-07-03T07:21:50.573Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-07-31T07:42:17.253Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

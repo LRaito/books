@@ -53,6 +53,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -799,6 +803,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.5" data-path="../doc_other/redis_sentinel.html">
+            
+                <a href="../doc_other/redis_sentinel.html">
+            
+                    
+                    Redis 哨兵模式
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -849,7 +866,249 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x914D;&#x7F6E;-data-&#x8282;&#x70B9;">&#x914D;&#x7F6E; Data &#x8282;&#x70B9;</h1><ul><li>Data &#x8282;&#x70B9;&#x914D;&#x7F6E;&#x8BBE;&#x7F6E;
+                                <ul>
+<li><div><a href="#&#x914D;&#x7F6E;-data-&#x8282;&#x70B9;">&#x914D;&#x7F6E; Data &#x8282;&#x70B9;</a><i></i></div></li>
+<li><div><a href="#data-&#x8282;&#x70B9;&#x914D;&#x7F6E;&#x8BBE;&#x7F6E;">Data &#x8282;&#x70B9;&#x914D;&#x7F6E;&#x8BBE;&#x7F6E;</a><i></i></div></li>
+<li><div><a href="#global-&#x5168;&#x5C40;&#x8BBE;&#x7F6E;">Global &#x5168;&#x5C40;&#x8BBE;&#x7F6E;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#reporting-disabled">reporting-disabled</a><i></i></div></li>
+<li><div><a href="#bind-address">bind-address</a><i></i></div></li>
+<li><div><a href="#hostname">hostname</a><i></i></div></li>
+<li><div><a href="#gossip-frequency">gossip-frequency</a><i></i></div></li>
+<li><div><a href="#compact-series-file-v1114">compact-series-file v1.11.4+</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#enterprise-license-&#x4F01;&#x4E1A;&#x8BB8;&#x53EF;&#x8BC1;">Enterprise license &#x4F01;&#x4E1A;&#x8BB8;&#x53EF;&#x8BC1;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#license-key">license-key</a><i></i></div></li>
+<li><div><a href="#license-path">license-path</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#meta-node-meta&#x8282;&#x70B9;&#x8BBE;&#x7F6E;">Meta node Meta&#x8282;&#x70B9;&#x8BBE;&#x7F6E;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#dir">dir</a><i></i></div></li>
+<li><div><a href="#meta-tls-enabled">meta-tls-enabled</a><i></i></div></li>
+<li><div><a href="#meta-insecure-tls">meta-insecure-tls</a><i></i></div></li>
+<li><div><a href="#meta-auth-enabled">meta-auth-enabled</a><i></i></div></li>
+<li><div><a href="#meta-internal-shared-secret">meta-internal-shared-secret</a><i></i></div></li>
+<li><div><a href="#retention-autocreate">retention-autocreate</a><i></i></div></li>
+<li><div><a href="#logging-enabled">logging-enabled</a><i></i></div></li>
+<li><div><a href="#password-hash">password-hash</a><i></i></div></li>
+<li><div><a href="#ensure-fips">ensure-fips</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#data-&#x6570;&#x636E;">Data &#x6570;&#x636E;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#dir">dir</a><i></i></div></li>
+<li><div><a href="#wal-dir">wal-dir</a><i></i></div></li>
+<li><div><a href="#trace-logging-enabled">trace-logging-enabled</a><i></i></div></li>
+<li><div><a href="#query-log-enabled">query-log-enabled</a><i></i></div></li>
+<li><div><a href="#query-log-path">query-log-path</a><i></i></div></li>
+<li><div><a href="#wal-fsync-delay">wal-fsync-delay</a><i></i></div></li>
+<li><div><a href="#ingress-metric-by-measurement-enabled">ingress-metric-by-measurement-enabled</a><i></i></div></li>
+<li><div><a href="#ingress-metric-by-login-enabled">ingress-metric-by-login-enabled</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#tsm&#x5F15;&#x64CE;&#x7684;&#x6570;&#x636E;&#x8BBE;&#x7F6E;">TSM&#x5F15;&#x64CE;&#x7684;&#x6570;&#x636E;&#x8BBE;&#x7F6E;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#cache-max-memory-size">cache-max-memory-size</a><i></i></div></li>
+<li><div><a href="#cache-snapshot-memory-size">cache-snapshot-memory-size</a><i></i></div></li>
+<li><div><a href="#cache-snapshot-write-cold-duration">cache-snapshot-write-cold-duration</a><i></i></div></li>
+<li><div><a href="#max-concurrent-compactions">max-concurrent-compactions</a><i></i></div></li>
+<li><div><a href="#compact-throughput">compact-throughput</a><i></i></div></li>
+<li><div><a href="#compact-throughput-burst">compact-throughput-burst</a><i></i></div></li>
+<li><div><a href="#compact-full-write-cold-duration">compact-full-write-cold-duration</a><i></i></div></li>
+<li><div><a href="#index-version">index-version</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#inmem-&#x7D22;&#x5F15;&#x8BBE;&#x7F6E;">inmem &#x7D22;&#x5F15;&#x8BBE;&#x7F6E;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#max-series-per-database">max-series-per-database</a><i></i></div></li>
+<li><div><a href="#max-values-per-tag">max-values-per-tag</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#tsi&#xFF08;tsi1&#xFF09;&#x6307;&#x6570;&#x8BBE;&#x7F6E;">TSI&#xFF08;tsi1&#xFF09;&#x6307;&#x6570;&#x8BBE;&#x7F6E;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#max-index-log-file-size">max-index-log-file-size</a><i></i></div></li>
+<li><div><a href="#series-id-set-cache-size">series-id-set-cache-size</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#cluster-&#x96C6;&#x7FA4;">Cluster &#x96C6;&#x7FA4;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#dial-timeout">dial-timeout</a><i></i></div></li>
+<li><div><a href="#pool-max-idle-time">pool-max-idle-time</a><i></i></div></li>
+<li><div><a href="#pool-max-idle-streams">pool-max-idle-streams</a><i></i></div></li>
+<li><div><a href="#allow-out-of-order-writes">allow-out-of-order-writes</a><i></i></div></li>
+<li><div><a href="#shard-reader-timeout">shard-reader-timeout</a><i></i></div></li>
+<li><div><a href="#https-enabled">https-enabled</a><i></i></div></li>
+<li><div><a href="#https-certificate">https-certificate</a><i></i></div></li>
+<li><div><a href="#https-private-key">https-private-key</a><i></i></div></li>
+<li><div><a href="#https-insecure-tls">https-insecure-tls</a><i></i></div></li>
+<li><div><a href="#cluster-tracing">cluster-tracing</a><i></i></div></li>
+<li><div><a href="#write-timeout">write-timeout</a><i></i></div></li>
+<li><div><a href="#max-concurrent-queries">max-concurrent-queries</a><i></i></div></li>
+<li><div><a href="#max-concurrent-deletes">max-concurrent-deletes</a><i></i></div></li>
+<li><div><a href="#query-timeout">query-timeout</a><i></i></div></li>
+<li><div><a href="#log-queries-after">log-queries-after</a><i></i></div></li>
+<li><div><a href="#log-timedout-queries">log-timedout-queries</a><i></i></div></li>
+<li><div><a href="#max-select-point">max-select-point</a><i></i></div></li>
+<li><div><a href="#max-select-series">max-select-series</a><i></i></div></li>
+<li><div><a href="#max-select-buckets">max-select-buckets</a><i></i></div></li>
+<li><div><a href="#termination-query-log">termination-query-log</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#retention-&#x4FDD;&#x7559;&#x7B56;&#x7565;">Retention &#x4FDD;&#x7559;&#x7B56;&#x7565;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#enabled">enabled</a><i></i></div></li>
+<li><div><a href="#check-interval">check-interval</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#hinted-handoff-&#x7F13;&#x5B58;&#x961F;&#x5217;">Hinted Handoff &#x7F13;&#x5B58;&#x961F;&#x5217;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#batch-size">batch-size</a><i></i></div></li>
+<li><div><a href="#max-writes-pending">max-writes-pending</a><i></i></div></li>
+<li><div><a href="#dir">dir</a><i></i></div></li>
+<li><div><a href="#enabled">enabled</a><i></i></div></li>
+<li><div><a href="#max-size">max-size</a><i></i></div></li>
+<li><div><a href="#max-age">max-age</a><i></i></div></li>
+<li><div><a href="#retry-concurrency">retry-concurrency</a><i></i></div></li>
+<li><div><a href="#retry-rate-limit">retry-rate-limit</a><i></i></div></li>
+<li><div><a href="#retry-interval">retry-interval</a><i></i></div></li>
+<li><div><a href="#retry-max-interval">retry-max-interval</a><i></i></div></li>
+<li><div><a href="#purge-interval">purge-interval</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#anti-entropy-&#x53CD;&#x71B5;">Anti-Entropy &#x53CD;&#x71B5;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#enabled">enabled</a><i></i></div></li>
+<li><div><a href="#check-interval">check-interval</a><i></i></div></li>
+<li><div><a href="#max-fetch">max-fetch</a><i></i></div></li>
+<li><div><a href="#max-sync">max-sync</a><i></i></div></li>
+<li><div><a href="#auto-repair-missing">auto-repair-missing</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#shard-precreation-&#x5206;&#x7247;&#x9884;&#x521B;&#x5EFA;">Shard precreation &#x5206;&#x7247;&#x9884;&#x521B;&#x5EFA;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#enabled">enabled</a><i></i></div></li>
+<li><div><a href="#check-interval">check-interval</a><i></i></div></li>
+<li><div><a href="#advance-period">advance-period</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#monitor-&#x76D1;&#x63A7;">Monitor &#x76D1;&#x63A7;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#store-enabled">store-enabled</a><i></i></div></li>
+<li><div><a href="#store-database">store-database</a><i></i></div></li>
+<li><div><a href="#store-interval">store-interval</a><i></i></div></li>
+<li><div><a href="#remote-collect-interval">remote-collect-interval</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#http-endpoints-http&#x7AEF;&#x70B9;">HTTP endpoints HTTP&#x7AEF;&#x70B9;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#enabled">enabled</a><i></i></div></li>
+<li><div><a href="#flux-enabled">flux-enabled</a><i></i></div></li>
+<li><div><a href="#bind-address">bind-address</a><i></i></div></li>
+<li><div><a href="#auth-enabled">auth-enabled</a><i></i></div></li>
+<li><div><a href="#realm">realm</a><i></i></div></li>
+<li><div><a href="#log-enabled">log-enabled</a><i></i></div></li>
+<li><div><a href="#suppress-write-log">suppress-write-log</a><i></i></div></li>
+<li><div><a href="#access-log-path">access-log-path</a><i></i></div></li>
+<li><div><a href="#access-log-status-filters">access-log-status-filters</a><i></i></div></li>
+<li><div><a href="#write-tracing">write-tracing</a><i></i></div></li>
+<li><div><a href="#pprof-enabled">pprof-enabled</a><i></i></div></li>
+<li><div><a href="#https-enabled">https-enabled</a><i></i></div></li>
+<li><div><a href="#https-certificate">https-certificate</a><i></i></div></li>
+<li><div><a href="#https-private-key">https-private-key</a><i></i></div></li>
+<li><div><a href="#shared-secret">shared-secret</a><i></i></div></li>
+<li><div><a href="#max-body-size">max-body-size</a><i></i></div></li>
+<li><div><a href="#max-row-limit">max-row-limit</a><i></i></div></li>
+<li><div><a href="#max-connection-limit">max-connection-limit</a><i></i></div></li>
+<li><div><a href="#unix-socket-enabled">unix-socket-enabled</a><i></i></div></li>
+<li><div><a href="#bind-socket">bind-socket</a><i></i></div></li>
+<li><div><a href="#max-concurrent-write-limit">max-concurrent-write-limit</a><i></i></div></li>
+<li><div><a href="#max-enqueued-write-limit">max-enqueued-write-limit</a><i></i></div></li>
+<li><div><a href="#enqueued-write-timeout">enqueued-write-timeout</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#logging-&#x65E5;&#x5FD7;">Logging &#x65E5;&#x5FD7;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#format">format</a><i></i></div></li>
+<li><div><a href="#level">level</a><i></i></div></li>
+<li><div><a href="#suppress-logo">suppress-logo</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#subscriber-&#x8BA2;&#x9605;">Subscriber &#x8BA2;&#x9605;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#enabled">enabled</a><i></i></div></li>
+<li><div><a href="#http-timeout">http-timeout</a><i></i></div></li>
+<li><div><a href="#insecure-skip-verify">insecure-skip-verify</a><i></i></div></li>
+<li><div><a href="#ca-certs">ca-certs</a><i></i></div></li>
+<li><div><a href="#write-concurrency">write-concurrency</a><i></i></div></li>
+<li><div><a href="#write-buffer-size">write-buffer-size</a><i></i></div></li>
+<li><div><a href="#total-buffer-bytes">total-buffer-bytes</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#graphite-graphite&#x534F;&#x8BAE;">Graphite Graphite&#x534F;&#x8BAE;</a><i></i></div></li>
+<li><div><a href="#collectd-collectd&#x534F;&#x8BAE;">Collectd CollectD&#x534F;&#x8BAE;</a><i></i></div></li>
+<li><div><a href="#opentsdb-opentsdb&#x534F;&#x8BAE;">OpenTSDB OpenTSDB&#x534F;&#x8BAE;</a><i></i></div></li>
+<li><div><a href="#udp-udp&#x534F;&#x8BAE;">UDP UDP&#x534F;&#x8BAE;</a><i></i></div></li>
+<li><div><a href="#continuous-queries-&#x8FDE;&#x7EED;&#x67E5;&#x8BE2;">Continuous queries &#x8FDE;&#x7EED;&#x67E5;&#x8BE2;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#enabled">enabled</a><i></i></div></li>
+<li><div><a href="#log-enabled">log-enabled</a><i></i></div></li>
+<li><div><a href="#query-stats-enabled">query-stats-enabled</a><i></i></div></li>
+<li><div><a href="#run-interval">run-interval</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#tls-tls&#x52A0;&#x5BC6;">TLS TLS&#x52A0;&#x5BC6;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#min-version">min-version</a><i></i></div></li>
+<li><div><a href="#max-version">max-version</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#flux-query-controls-flux&#x67E5;&#x8BE2;">Flux Query controls Flux&#x67E5;&#x8BE2;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#query-concurrency">query-concurrency</a><i></i></div></li>
+<li><div><a href="#query-initial-memory-bytes">query-initial-memory-bytes</a><i></i></div></li>
+<li><div><a href="#query-max-memory-bytes">query-max-memory-bytes</a><i></i></div></li>
+<li><div><a href="#total-max-memory-bytes">total-max-memory-bytes</a><i></i></div></li>
+<li><div><a href="#query-queue-size">query-queue-size</a><i></i></div></li>
+</ul></li>
+</ul></li>
+</ul>
+
+
+
+
+<h1 id="&#x914D;&#x7F6E;-data-&#x8282;&#x70B9;">&#x914D;&#x7F6E; Data &#x8282;&#x70B9;</h1><ul><li>Data &#x8282;&#x70B9;&#x914D;&#x7F6E;&#x8BBE;&#x7F6E;
 <ul><li>Global
 </li>
 <li>Enterprise license [enterprise]
@@ -1470,7 +1729,7 @@ max-version = &quot;tls1.3&quot;</code></pre>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"配置 Data 节点","level":"1.5.2.1.2","depth":4,"next":{"title":"配置 Meta 节点","level":"1.5.2.1.3","depth":4,"path":"doc_influxdb/administration_configure_meta_nodes.md","ref":"doc_influxdb/administration_configure_meta_nodes.md","articles":[]},"previous":{"title":"配置集群","level":"1.5.2.1.1","depth":4,"path":"doc_influxdb/administration_configure_clusters.md","ref":"doc_influxdb/administration_configure_clusters.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_influxdb/administration_configure_data_nodes.md","mtime":"2025-06-26T06:34:11.631Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-07-09T08:58:25.279Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"配置 Data 节点","level":"1.5.2.1.2","depth":4,"next":{"title":"配置 Meta 节点","level":"1.5.2.1.3","depth":4,"path":"doc_influxdb/administration_configure_meta_nodes.md","ref":"doc_influxdb/administration_configure_meta_nodes.md","articles":[]},"previous":{"title":"配置集群","level":"1.5.2.1.1","depth":4,"path":"doc_influxdb/administration_configure_clusters.md","ref":"doc_influxdb/administration_configure_clusters.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","page-treeview","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"page-treeview":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_influxdb/administration_configure_data_nodes.md","mtime":"2025-06-26T06:34:11.631Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-07-31T07:42:17.253Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

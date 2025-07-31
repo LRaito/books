@@ -53,6 +53,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -799,6 +803,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.5" data-path="../doc_other/redis_sentinel.html">
+            
+                <a href="../doc_other/redis_sentinel.html">
+            
+                    
+                    Redis 哨兵模式
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -849,7 +866,32 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="dockerfile-&#x6982;&#x89C8;">Dockerfile &#x6982;&#x89C8;</h1><h2 id="dockerfile">Dockerfile</h2><p>&#x4E00;&#x5207;&#x90FD;&#x4ECE; Dockerfile &#x5F00;&#x59CB;&#x3002;</p><p>Docker &#x901A;&#x8FC7;&#x8BFB;&#x53D6; Dockerfile &#x4E2D;&#x7684;&#x6307;&#x4EE4;&#x6765;&#x6784;&#x5EFA;&#x955C;&#x50CF;&#x3002;Dockerfile &#x662F;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6784;&#x5EFA;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x6307;&#x4EE4;&#x3002;Dockerfile &#x6307;&#x4EE4;&#x8BED;&#x6CD5;&#x7531; <a href="https://docs.docker.com/reference/dockerfile" target="_blank">Dockerfile Reference</a> &#x4E2D;&#x7684;&#x89C4;&#x8303;&#x5B9A;&#x4E49;&#x3002;</p><p>&#x4EE5;&#x4E0B;&#x662F;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x6307;&#x4EE4;&#x7C7B;&#x578B;&#xFF1A;</p><table>
+                                <ul>
+<li><div><a href="#dockerfile-&#x6982;&#x89C8;">Dockerfile &#x6982;&#x89C8;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#dockerfile">Dockerfile</a><i></i></div></li>
+<li><div><a href="#filename">Filename</a><i></i></div></li>
+<li><div><a href="#docker-images">Docker images</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#example">Example</a><i></i></div></li>
+<li><div><a href="#dockerfile-syntax">Dockerfile syntax</a><i></i></div></li>
+<li><div><a href="#base-image">Base image</a><i></i></div></li>
+<li><div><a href="#environment-setup">Environment setup</a><i></i></div></li>
+<li><div><a href="#comments">Comments</a><i></i></div></li>
+<li><div><a href="#installing-dependencies">Installing dependencies</a><i></i></div></li>
+<li><div><a href="#copying-files">Copying files</a><i></i></div></li>
+<li><div><a href="#setting-environment-variables">Setting environment variables</a><i></i></div></li>
+<li><div><a href="#exposed-ports">Exposed ports</a><i></i></div></li>
+<li><div><a href="#starting-the-application">Starting the application</a><i></i></div></li>
+</ul></li>
+<li><div><a href="#building">Building</a><i></i></div></li>
+</ul></li>
+</ul>
+
+
+
+
+<h1 id="dockerfile-&#x6982;&#x89C8;">Dockerfile &#x6982;&#x89C8;</h1><h2 id="dockerfile">Dockerfile</h2><p>&#x4E00;&#x5207;&#x90FD;&#x4ECE; Dockerfile &#x5F00;&#x59CB;&#x3002;</p><p>Docker &#x901A;&#x8FC7;&#x8BFB;&#x53D6; Dockerfile &#x4E2D;&#x7684;&#x6307;&#x4EE4;&#x6765;&#x6784;&#x5EFA;&#x955C;&#x50CF;&#x3002;Dockerfile &#x662F;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x6784;&#x5EFA;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x6307;&#x4EE4;&#x3002;Dockerfile &#x6307;&#x4EE4;&#x8BED;&#x6CD5;&#x7531; <a href="https://docs.docker.com/reference/dockerfile" target="_blank">Dockerfile Reference</a> &#x4E2D;&#x7684;&#x89C4;&#x8303;&#x5B9A;&#x4E49;&#x3002;</p><p>&#x4EE5;&#x4E0B;&#x662F;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x6307;&#x4EE4;&#x7C7B;&#x578B;&#xFF1A;</p><table>
 <thead>
 <tr><th>&#x6307;&#x4EE4;</th>
 <th>&#x63CF;&#x8FF0;</th>
@@ -942,7 +984,7 @@ RUN apt-get update &amp;&amp; apt-get install -y python3 python3-pip</code></pre
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Dockerfile 概览","level":"1.3.1.1.2","depth":4,"next":{"title":"加速 Golang 程序构建","level":"1.3.2","depth":2,"path":"doc_docker/cache.md","ref":"doc_docker/cache.md","articles":[]},"previous":{"title":"Docker Build 概览","level":"1.3.1.1.1","depth":4,"path":"doc_docker/docker_build_overview.md","ref":"doc_docker/docker_build_overview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_docker/dockerfile_overview.md","mtime":"2025-04-02T08:15:36.349Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-07-09T08:58:25.279Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Dockerfile 概览","level":"1.3.1.1.2","depth":4,"next":{"title":"加速 Golang 程序构建","level":"1.3.2","depth":2,"path":"doc_docker/cache.md","ref":"doc_docker/cache.md","articles":[]},"previous":{"title":"Docker Build 概览","level":"1.3.1.1.1","depth":4,"path":"doc_docker/docker_build_overview.md","ref":"doc_docker/docker_build_overview.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","page-treeview","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"page-treeview":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_docker/dockerfile_overview.md","mtime":"2025-04-02T08:15:36.349Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-07-31T07:42:17.253Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

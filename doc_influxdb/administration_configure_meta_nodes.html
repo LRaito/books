@@ -53,6 +53,10 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-treeview/style.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
@@ -799,6 +803,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.7.5" data-path="../doc_other/redis_sentinel.html">
+            
+                <a href="../doc_other/redis_sentinel.html">
+            
+                    
+                    Redis 哨兵模式
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -849,7 +866,64 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x914D;&#x7F6E;-meta-&#x8282;&#x70B9;">&#x914D;&#x7F6E; Meta &#x8282;&#x70B9;</h1><ul><li>Meta &#x8282;&#x70B9;&#x914D;&#x7F6E;&#x8BBE;&#x7F6E;
+                                <ul>
+<li><div><a href="#&#x914D;&#x7F6E;-meta-&#x8282;&#x70B9;">&#x914D;&#x7F6E; Meta &#x8282;&#x70B9;</a><i></i></div></li>
+<li><div><a href="#global-&#x5168;&#x5C40;&#x914D;&#x7F6E;">Global &#x5168;&#x5C40;&#x914D;&#x7F6E;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#reporting-disabled">reporting-disabled</a><i></i></div></li>
+<li><div><a href="#bind-address">bind-address</a><i></i></div></li>
+<li><div><a href="#hostname">hostname</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#enterprise-license-&#x4F01;&#x4E1A;&#x8BB8;&#x53EF;&#x8BC1;">Enterprise license &#x4F01;&#x4E1A;&#x8BB8;&#x53EF;&#x8BC1;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#license-key">license-key</a><i></i></div></li>
+<li><div><a href="#license-path">license-path</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#meta-&#x8282;&#x70B9;">Meta &#x8282;&#x70B9;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li> 
+<ul>
+<li><div><a href="#dir">dir</a><i></i></div></li>
+<li><div><a href="#bind-address">bind-address</a><i></i></div></li>
+<li><div><a href="#http-bind-address">http-bind-address</a><i></i></div></li>
+<li><div><a href="#https-enabled">https-enabled</a><i></i></div></li>
+<li><div><a href="#https-certificate">https-certificate</a><i></i></div></li>
+<li><div><a href="#https-private-key">https-private-key</a><i></i></div></li>
+<li><div><a href="#https-insecure-tls">https-insecure-tls</a><i></i></div></li>
+<li><div><a href="#data-use-tls">data-use-tls</a><i></i></div></li>
+<li><div><a href="#data-insecure-tls">data-insecure-tls</a><i></i></div></li>
+<li><div><a href="#gossip-frequency">gossip-frequency</a><i></i></div></li>
+<li><div><a href="#announcement-expiration">announcement-expiration</a><i></i></div></li>
+<li><div><a href="#retention-autocreate">retention-autocreate</a><i></i></div></li>
+<li><div><a href="#election-timeout">election-timeout</a><i></i></div></li>
+<li><div><a href="#heartbeat-timeout">heartbeat-timeout</a><i></i></div></li>
+<li><div><a href="#leader-lease-timeout">leader-lease-timeout</a><i></i></div></li>
+<li><div><a href="#commit-timeout">commit-timeout</a><i></i></div></li>
+<li><div><a href="#consensus-timeout">consensus-timeout</a><i></i></div></li>
+<li><div><a href="#cluster-tracing">cluster-tracing</a><i></i></div></li>
+<li><div><a href="#logging-enabled">logging-enabled</a><i></i></div></li>
+<li><div><a href="#pprof-enabled">pprof-enabled</a><i></i></div></li>
+<li><div><a href="#lease-duration">lease-duration</a><i></i></div></li>
+<li><div><a href="#auth-enabled">auth-enabled</a><i></i></div></li>
+<li><div><a href="#ldap-allowed">ldap-allowed</a><i></i></div></li>
+<li><div><a href="#internal-shared-secret">internal-shared-secret</a><i></i></div></li>
+<li><div><a href="#password-hash">password-hash</a><i></i></div></li>
+<li><div><a href="#ensure-fips">ensure-fips</a><i></i></div></li>
+</ul></li>
+</ul></li>
+<li><div><a href="#tls-tls&#x52A0;&#x5BC6;">TLS TLS&#x52A0;&#x5BC6;</a><i></i></div></li>
+</ul>
+
+
+
+
+<h1 id="&#x914D;&#x7F6E;-meta-&#x8282;&#x70B9;">&#x914D;&#x7F6E; Meta &#x8282;&#x70B9;</h1><ul><li>Meta &#x8282;&#x70B9;&#x914D;&#x7F6E;&#x8BBE;&#x7F6E;
 <ul><li>Global options
 </li>
 <li>Enterprise license [enterprise]
@@ -1021,7 +1095,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"配置 Meta 节点","level":"1.5.2.1.3","depth":4,"next":{"title":"实践","level":"1.5.3","depth":2,"path":"doc_influxdb/practice.md","ref":"doc_influxdb/practice.md","articles":[{"title":"集群版实践","level":"1.5.3.1","depth":3,"path":"doc_influxdb/practice_cluster.md","ref":"doc_influxdb/practice_cluster.md","articles":[]}]},"previous":{"title":"配置 Data 节点","level":"1.5.2.1.2","depth":4,"path":"doc_influxdb/administration_configure_data_nodes.md","ref":"doc_influxdb/administration_configure_data_nodes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_influxdb/administration_configure_meta_nodes.md","mtime":"2025-07-02T02:19:39.537Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-07-09T08:58:25.279Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"配置 Meta 节点","level":"1.5.2.1.3","depth":4,"next":{"title":"实践","level":"1.5.3","depth":2,"path":"doc_influxdb/practice.md","ref":"doc_influxdb/practice.md","articles":[{"title":"集群版实践","level":"1.5.3.1","depth":3,"path":"doc_influxdb/practice_cluster.md","ref":"doc_influxdb/practice_cluster.md","articles":[]}]},"previous":{"title":"配置 Data 节点","level":"1.5.2.1.2","depth":4,"path":"doc_influxdb/administration_configure_data_nodes.md","ref":"doc_influxdb/administration_configure_data_nodes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","page-treeview","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"page-treeview":{"copyright":"Copyright © aleen42","minHeaderCount":"1","minHeaderDeep":"1","collapsed":false},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_influxdb/administration_configure_meta_nodes.md","mtime":"2025-07-02T02:19:39.537Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2025-07-31T07:42:17.253Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
