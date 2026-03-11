@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Docker · GitBook</title>
+        <title>chronos · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.1">
@@ -93,10 +93,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="docker_build.html" />
+    <link rel="next" href="../doc_other/" />
     
     
-    <link rel="prev" href="../doc_gitbook/pub_to_github.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -196,9 +196,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="../doc_docker/">
             
-                <a href="./">
+                <a href="../doc_docker/">
             
                     
                     Docker
@@ -210,9 +210,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="docker_build.html">
+        <li class="chapter " data-level="1.3.1" data-path="../doc_docker/docker_build.html">
             
-                <a href="docker_build.html">
+                <a href="../doc_docker/docker_build.html">
             
                     
                     Docker Build
@@ -224,9 +224,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1.1" data-path="core_concepts.html">
+        <li class="chapter " data-level="1.3.1.1" data-path="../doc_docker/core_concepts.html">
             
-                <a href="core_concepts.html">
+                <a href="../doc_docker/core_concepts.html">
             
                     
                     核心概念
@@ -238,9 +238,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1.1.1" data-path="docker_build_overview.html">
+        <li class="chapter " data-level="1.3.1.1.1" data-path="../doc_docker/docker_build_overview.html">
             
-                <a href="docker_build_overview.html">
+                <a href="../doc_docker/docker_build_overview.html">
             
                     
                     Docker Build 概览
@@ -251,9 +251,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.1.1.2" data-path="dockerfile_overview.html">
+        <li class="chapter " data-level="1.3.1.1.2" data-path="../doc_docker/dockerfile_overview.html">
             
-                <a href="dockerfile_overview.html">
+                <a href="../doc_docker/dockerfile_overview.html">
             
                     
                     Dockerfile 概览
@@ -274,9 +274,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="cache.html">
+        <li class="chapter " data-level="1.3.2" data-path="../doc_docker/cache.html">
             
-                <a href="cache.html">
+                <a href="../doc_docker/cache.html">
             
                     
                     加速 Golang 程序构建
@@ -287,9 +287,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="multi_arch.html">
+        <li class="chapter " data-level="1.3.3" data-path="../doc_docker/multi_arch.html">
             
-                <a href="multi_arch.html">
+                <a href="../doc_docker/multi_arch.html">
             
                     
                     支持运行不同架构容器
@@ -1009,9 +1009,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.9" data-path="../doc_tsm/">
+        <li class="chapter " data-level="1.9" data-path="./">
             
-                <a href="../doc_tsm/">
+                <a href="./">
             
                     
                     时间序列预测模型
@@ -1023,9 +1023,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.9.1" data-path="../doc_tsm/chronos.html">
+        <li class="chapter active" data-level="1.9.1" data-path="chronos.html">
             
-                <a href="../doc_tsm/chronos.html">
+                <a href="chronos.html">
             
                     
                     chronos
@@ -1181,7 +1181,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Docker</a>
+        <a href=".." >chronos</a>
     </h1>
 </div>
 
@@ -1196,10 +1196,53 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h1><p>Docker &#x662F;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x7684;&#x5E94;&#x7528;&#x5BB9;&#x5668;&#x5F15;&#x64CE;&#xFF0C;&#x57FA;&#x4E8E; Go &#x8BED;&#x8A00; &#x5E76;&#x9075;&#x4ECE; Apache2.0 &#x534F;&#x8BAE;&#x5F00;&#x6E90;&#x3002;
-Docker &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x6253;&#x5305;&#x4ED6;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x4EE5;&#x53CA;&#x4F9D;&#x8D56;&#x5305;&#x5230;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7EA7;&#x3001;&#x53EF;&#x79FB;&#x690D;&#x7684;&#x5BB9;&#x5668;&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x53D1;&#x5E03;&#x5230;&#x4EFB;&#x4F55;&#x6D41;&#x884C;&#x7684; Linux &#x673A;&#x5668;&#x4E0A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x865A;&#x62DF;&#x5316;&#x3002;
-&#x5BB9;&#x5668;&#x662F;&#x5B8C;&#x5168;&#x4F7F;&#x7528;&#x6C99;&#x7BB1;&#x673A;&#x5236;&#xFF0C;&#x76F8;&#x4E92;&#x4E4B;&#x95F4;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x63A5;&#x53E3;&#xFF08;&#x7C7B;&#x4F3C; iPhone &#x7684; app&#xFF09;,&#x66F4;&#x91CD;&#x8981;&#x7684;&#x662F;&#x5BB9;&#x5668;&#x6027;&#x80FD;&#x5F00;&#x9500;&#x6781;&#x4F4E;&#x3002;</p><footer class="page-footer"><span class="copyright">Copyright &#xA9;ZhangFeng all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> 
-2025-03-24
+                                <ul>
+<li><div><a href="#chronos-&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x9884;&#x6D4B;&#x6A21;&#x578B;">chronos &#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x9884;&#x6D4B;&#x6A21;&#x578B;</a><i class="level__parent level__item level__parent--opened" state="opened" onclick="var curState = this.getAttribute(&apos;state&apos;);var nextState = curState === &apos;opened&apos; ? &apos;hidden&apos; : &apos;opened&apos;;this.setAttribute(&apos;state&apos;, nextState);this.className = this.className.split(curState).join(nextState);var list = this.parentNode.nextElementSibling;if (nextState === &apos;hidden&apos;) {    list.style.display = &apos;none&apos;;} else {    list.style.display = &apos;block&apos;;}"></i></div>
+<ul>
+<li><div><a href="#&#x73AF;&#x5883;">&#x73AF;&#x5883;</a><i></i></div></li>
+<li><div><a href="#&#x90E8;&#x7F72;">&#x90E8;&#x7F72;</a><i></i></div></li>
+<li><div><a href="#&#x95EE;&#x9898;&#x89E3;&#x51B3;">&#x95EE;&#x9898;&#x89E3;&#x51B3;</a><i></i></div></li>
+<li><div><a href="#&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</a><i></i></div></li>
+</ul></li>
+</ul>
+
+
+
+
+<h1 id="chronos-&#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x9884;&#x6D4B;&#x6A21;&#x578B;">chronos &#x65F6;&#x95F4;&#x5E8F;&#x5217;&#x9884;&#x6D4B;&#x6A21;&#x578B;</h1><h2 id="&#x73AF;&#x5883;">&#x73AF;&#x5883;</h2><ul><li>wls2
+</li>
+<li>ubuntu22.04
+</li>
+<li>python3.10 + venv
+</li>
+<li>cursor + Extension:Jupyter + Extension:Jupyter Notebook
+</li></ul>
+<h2 id="&#x90E8;&#x7F72;">&#x90E8;&#x7F72;</h2><pre><code class="lang-sh"><span class="hljs-comment"># &#x5EFA;&#x8BAE;&#x5728;python&#x865A;&#x62DF;&#x73AF;&#x5883;&#x90E8;&#x7F72;&#x9632;&#x6B62;&#x4F9D;&#x8D56;&#x51B2;&#x7A81;</span>
+python -m venv .venv      <span class="hljs-comment"># &#x521B;&#x5EFA;&#x865A;&#x62DF;&#x73AF;&#x5883;</span>
+<span class="hljs-built_in">source</span> .venv/bin/activate <span class="hljs-comment"># &#x8FDB;&#x5165;&#x865A;&#x62DF;&#x73AF;&#x5883;</span>
+deactivate                <span class="hljs-comment"># &#x9000;&#x51FA;&#x865A;&#x62DF;&#x73AF;&#x5883;</span>
+
+<span class="hljs-comment"># &#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#xFF0C;&#x4F1A;&#x5B58;&#x50A8;&#x5728; .venv &#x865A;&#x62DF;&#x73AF;&#x5883;&#x76EE;&#x5F55;&#x4E2D;</span>
+pip install chronos-forecasting
+pip install pyarrow
+pip install fastparquet
+
+<span class="hljs-comment"># &#x56FA;&#x5B9A;&#x4F9D;&#x8D56;&#x7248;&#x672C;</span>
+pip freeze &gt; requirements.txt</code></pre>
+<h2 id="&#x95EE;&#x9898;&#x89E3;&#x51B3;">&#x95EE;&#x9898;&#x89E3;&#x51B3;</h2><ol><li><p>&#x7B2C;&#x4E00;&#x6B21;&#x6267;&#x884C; from_pretrained &#x51FD;&#x6570;&#x5361;&#x4F4F;
+&#x56E0;&#x4E3A;&#x5728;&#x4E0B;&#x8F7D;&#x6A21;&#x578B;&#xFF0C;&#x9700;&#x8981;&#x79D1;&#x5B66;&#x4E0A;&#x7F51;&#x6216;&#x8005;&#x4F7F;&#x7528;<code>https://hf-mirror.com</code>&#x7B49;&#x56FD;&#x5185;&#x955C;&#x50CF;&#x7AD9;&#x4E0B;&#x8F7D;&#xFF0C;&#x6A21;&#x578B;&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x5230;&#x7528;&#x6237;&#x7F13;&#x5B58;&#x76EE;&#x5F55;&#xFF0C;&#x5982;: <code>~/.cache/huggingface/</code>,&#x4E0B;&#x4E00;&#x6B21;&#x6267;&#x884C;&#x4F1A;&#x5148;&#x4ECE;&#x7F13;&#x5B58;&#x8BFB;&#x53D6;&#x65E0;&#x9700;&#x91CD;&#x65B0;&#x4E0B;&#x8F7D;&#x3002;</p></li>
+<li><p>pyarrow&#x6A21;&#x5757;&#x5185;&#x51FA;&#x73B0;&#x91CD;&#x590D;&#x5B9A;&#x4E49;&#x62A5;&#x9519;</p><pre><code>ArrowKeyError: A type extension with name pandas.period already defined</code></pre>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5DF2;&#x77E5;&#x7684;&#x517C;&#x5BB9;&#x6027;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4F7F;&#x7528; fastparquet &#x5F15;&#x64CE;&#x89C4;&#x907F;&#x8BE5;&#x95EE;&#x9898;</p><pre><code>energy_context_df = pd.read_parquet(
+ &quot;https://autogluon.s3.amazonaws.com/datasets/timeseries/electricity_price/train.parquet&quot;,
+ engine=&quot;fastparquet&quot;
+)</code></pre>
+</li></ol>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2><ul><li><a href="https://github.com/amazon-science/chronos-forecasting" target="_blank">https://github.com/amazon-science/chronos-forecasting</a>
+</li>
+<li><a href="https://github.com/amazon-science/chronos-forecasting/blob/main/notebooks/chronos-2-quickstart.ipynb" target="_blank">https://github.com/amazon-science/chronos-forecasting/blob/main/notebooks/chronos-2-quickstart.ipynb</a> 
+</li></ul>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9;ZhangFeng all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> 
+2026-03-11
 </span></footer>
 
 
@@ -1230,12 +1273,12 @@ Docker &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x6253;&#x5305;&#x4ED6;&
 
             
                 
-                <a href="../doc_gitbook/pub_to_github.html" class="navigation navigation-prev " aria-label="Previous page: 发布到 GitHub Pages">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 时间序列预测模型">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="docker_build.html" class="navigation navigation-next " aria-label="Next page: Docker Build">
+                <a href="../doc_other/" class="navigation navigation-next " aria-label="Next page: 其他">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1246,7 +1289,7 @@ Docker &#x53EF;&#x4EE5;&#x8BA9;&#x5F00;&#x53D1;&#x8005;&#x6253;&#x5305;&#x4ED6;&
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Docker","level":"1.3","depth":1,"next":{"title":"Docker Build","level":"1.3.1","depth":2,"path":"doc_docker/docker_build.md","ref":"doc_docker/docker_build.md","articles":[{"title":"核心概念","level":"1.3.1.1","depth":3,"path":"doc_docker/core_concepts.md","ref":"doc_docker/core_concepts.md","articles":[{"title":"Docker Build 概览","level":"1.3.1.1.1","depth":4,"path":"doc_docker/docker_build_overview.md","ref":"doc_docker/docker_build_overview.md","articles":[]},{"title":"Dockerfile 概览","level":"1.3.1.1.2","depth":4,"path":"doc_docker/dockerfile_overview.md","ref":"doc_docker/dockerfile_overview.md","articles":[]}]}]},"previous":{"title":"发布到 GitHub Pages","level":"1.2.3","depth":2,"path":"doc_gitbook/pub_to_github.md","ref":"doc_gitbook/pub_to_github.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","page-treeview","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"page-treeview":{"copyright":"Copyright © aleen42","minHeaderCount":"2","minHeaderDeep":"2","collapsed":false},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_docker/README.md","mtime":"2025-03-24T09:13:48.237Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2026-03-11T03:25:50.695Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"chronos","level":"1.9.1","depth":2,"next":{"title":"其他","level":"1.10","depth":1,"path":"doc_other/README.md","ref":"doc_other/README.md","articles":[{"title":"学习资料整理","level":"1.10.1","depth":2,"path":"doc_other/learn.md","ref":"doc_other/learn.md","articles":[]},{"title":"wsl 科学上网","level":"1.10.2","depth":2,"path":"doc_other/proxy.md","ref":"doc_other/proxy.md","articles":[]},{"title":"Jenkins 并发构建","level":"1.10.3","depth":2,"path":"doc_other/jenkins_parallel.md","ref":"doc_other/jenkins_parallel.md","articles":[]},{"title":"js 使用手册","level":"1.10.4","depth":2,"path":"doc_other/jq.md","ref":"doc_other/jq.md","articles":[]},{"title":"Redis 哨兵模式","level":"1.10.5","depth":2,"path":"doc_other/redis_sentinel.md","ref":"doc_other/redis_sentinel.md","articles":[]},{"title":"ssh 延迟问题","level":"1.10.6","depth":2,"path":"doc_other/ssh.md","ref":"doc_other/ssh.md","articles":[]},{"title":"electron 安装总结","level":"1.10.7","depth":2,"path":"doc_other/electron_install.md","ref":"doc_other/electron_install.md","articles":[]}]},"previous":{"title":"时间序列预测模型","level":"1.9","depth":1,"path":"doc_tsm/README.md","ref":"doc_tsm/README.md","articles":[{"title":"chronos","level":"1.9.1","depth":2,"path":"doc_tsm/chronos.md","ref":"doc_tsm/chronos.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["toggle-chapters","hide-element","back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","insert-logo","popup","-share","donate","tbfed-pagefooter","page-treeview","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright ©ZhangFeng","modify_label":" ","modify_format":"YYYY-MM-DD"},"page-treeview":{"copyright":"Copyright © aleen42","minHeaderCount":"2","minHeaderDeep":"2","collapsed":false},"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"code":{"copyButtons":true},"donate":{"title":"","button":"赏","wechat":"images/donate_wx.png","alipay":"images/donate_zfb.png","wechatText":"微信打赏","alipayText":"支付宝打赏"},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"insert-logo":{"url":"images/logo.png","style":"background: none; max-height: 150px; min-height: 150px"}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"doc_tsm/chronos.md","mtime":"2026-03-11T09:04:48.235Z","type":"markdown"},"gitbook":{"version":"3.2.1","time":"2026-03-11T03:25:50.695Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
