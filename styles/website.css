@@ -1,0 +1,8 @@
+/* Widen reading content (GitBook default max-width is 800px) */
+.book .book-body .page-wrapper .page-inner {
+  max-width: none !important;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
